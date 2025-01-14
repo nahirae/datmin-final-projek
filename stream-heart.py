@@ -63,6 +63,7 @@ with st.expander("PENJELASAN FITUR INPUT : (Klik untuk melihat detail)"):
     *   **Depresi ST (Oldpeak):** Depresi segmen ST yang diukur pada EKG.
     *   **Kemiringan ST:** Kemiringan segmen ST pada EKG (Up, Flat, Downsloping).
     """)
+st.write("**Langkah-Langkah Penggunaan (Step-by-Step):**")
 st.markdown("""
     *   **1. Input Data Pasien:** Tenaga kesehatan memasukkan data pasien ke dalam formulir yang tersedia.
     *   **2. Periksa Kembali Data:** Sebelum menekan tombol "Predict", tenaga kesehatan disarankan untuk memeriksa kembali data yang telah diinput untuk memastikan keakuratannya.
