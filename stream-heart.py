@@ -46,7 +46,33 @@ st.set_page_config(
 
 # App title and explanation
 st.title("Prediksi Penyakit Jantung")
-st.write("Aplikasi ini membantu Anda memprediksi risiko penyakit jantung berdasarkan faktor-faktor yang Anda masukkan.")
+st.write("Aplikasi ini membantu Anda memprediksi risiko penyakit jantung berdasarkan faktor-faktor yang Anda masukkan.") 
+st.write("Tujuan Aplikasi :")
+st.write("Aplikasi ini dirancang untuk membantu tenaga kesehatan dalam memprediksi risiko penyakit jantung pada pasien berdasarkan beberapa faktor risiko. Aplikasi ini menggunakan algoritma machine learning (Regresi Logistik) untuk memberikan prediksi. Hasil prediksi ini sebaiknya digunakan sebagai informasi tambahan dan diinterpretasikan bersama dengan penilaian klinis profesional.")
+with st.expander("PENJELASAN FITUR INPUT : (Klik untuk melihat detail)"):
+    st.markdown("""
+    *   **Usia:** Usia pasien dalam tahun.
+    *   **Jenis Kelamin:** Jenis kelamin pasien (Laki-laki/Perempuan).
+    *   **Tipe Nyeri Dada:**  Jenis nyeri dada yang dialami pasien (Typical Angina, Atypical Angina, Non-Anginal Pain, Asymptomatic).
+    *   **Tekanan Darah Istirahat (mmHg):**  Tekanan darah sistolik dan diastolik yang diukur saat pasien istirahat.
+    *   **Kolesterol (mg/dL):** Kadar kolesterol serum pasien.
+    *   **Gula Darah Puasa > 120 mg/dl:** Apakah kadar gula darah puasa pasien lebih dari 120 mg/dl (Ya/Tidak).
+    *   **Hasil ECG Istirahat:** Hasil elektrokardiogram (EKG) saat istirahat (berikan pilihan dan penjelasannya).
+    *   **Detak Jantung Maksimal (bpm):** Detak jantung maksimal yang dicapai pasien.
+    *   **Angina Saat Olahraga:** Apakah pasien mengalami angina saat berolahraga (Ya/Tidak).
+    *   **Depresi ST (Oldpeak):** Depresi segmen ST yang diukur pada EKG.
+    *   **Kemiringan ST:** Kemiringan segmen ST pada EKG (Up, Flat, Downsloping).
+    """)
+st.markdown("""
+    *   **1. Input Data Pasien:** Tenaga kesehatan memasukkan data pasien ke dalam formulir yang tersedia.
+    *   **2. Periksa Kembali Data:** Sebelum menekan tombol "Predict", tenaga kesehatan disarankan untuk memeriksa kembali data yang telah diinput untuk memastikan keakuratannya.
+    *   **3. Klik Tombol "Predict":** Setelah data diinput dan diperiksa, tenaga kesehatan dapat menekan tombol "Predict" untuk mendapatkan hasil prediksi.
+    *   **4. Interpretasi Hasil:** Aplikasi akan menampilkan hasil prediksi risiko penyakit jantung.
+        - untuk pasien yang sehat dan tidak terindikasi penyakit jantung hasil predict akan memunculkan output: **'Tidak Terindikasi Penyakit Jantung'**
+        - untuk pasien yang memungkinkan mengidap penyakit jantung atau terindikasi penyakit jantung hasil predict akan memunculkan output: **'Terindikasi Penyakit Jantung'**
+    """)
+
+st.subheader("Silahkan Isi Form Berikut!")
 
 col1, col2 = st.columns(2)
 with col1:
